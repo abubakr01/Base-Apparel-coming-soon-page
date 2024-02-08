@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+span{ color:  hsl(0, 36%, 70%);}
+
+.logo{
+    top: 30px;
+    left: 9rem;
+    position: absolute;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.D1{
+    padding: 80px 150px;
+    margin: auto 0;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: 800px;
+    background-repeat: repeat;
+}
+.D1 h1{
+    margin-top: 50px;
+    font-size: 3.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+.D1 div{max-width: 390px;}
+
+.D1 p{
+    max-width: 390px;
+    line-height: 2; 
+    color:  hsl(0, 36%, 70%);
+    margin: 30px 0;
+}
+
+.D2 img{width: 100%;}
+
+.mobile-img{display: none;}
+
+.inpt-btn{display: flex;}
+
+form{position: relative; }
+
+button{
+    position: absolute;
+    right: 0;
+    height: 42px;
+    border-radius: 30px;
+    width: 80px;
+    border: none;
+    background-image:linear-gradient( to right, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    cursor: pointer;
+}
+
+button:hover{background-image: linear-gradient( to left, hsl(0, 77%, 92%), hsl(0, 0%, 89%));}
+
+input{
+    padding-left: 30px;
+    height: 40px;
+    border-radius: 30px;
+    width: 85%;
+    border: 1px solid hsl(0, 0%, 84%);
+    outline: none ;
+}
+
+input[type=text]:focus{border: hsl(0, 93%, 68%) solid 1.8px }
+
+.error-div{
+    visibility: hidden;  
+       position: relative;
+       margin-top: 10px;
+       text-align: left;
+       padding-left: 30px;
+       color: hsl(0, 93%, 68%);
+     }
+.icon-error{
+       position: absolute;
+       bottom: 2.3rem;
+       right: 5.5rem;
+      
+   }
+   footer{ margin: 10px 0 50px;}
+   
+::placeholder {color:hsl(0, 0%, 84%)}
+
+  @media screen and (max-width:1050px){
+    .D1{padding: 20px 100px; }
+}
+
+    @media screen and (max-width:930px){
+        .D1{padding: 20px 50px; }
+        
+        .D2 { margin: auto 0; }
+  }
+  @media screen and (max-width:700px){
+
+    .logo{
+        position: static;
+        padding:  30px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .D1{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .D2{
+        width: 100%;
+    }
+    .mobile-img{
+        display: block;
+        width: 100%;
+    }
+    .desktop-img{
+        display: none;
+    }
+    footer{
+        max-width: 250px;
+        text-align: center;
+        margin: 0 auto 30px;
+    }
+}
+@media screen and (max-width:500px){
+    .D1{ padding:20px;}
+    
+    .D1 h1{font-size: 2rem;}
+    
+    .D1 div{max-width: 380px;}
+}
+@media screen and (max-width:300px){
+    
+    .D1{ padding: 20px}
+    .D1  h1{
+        margin-top: 15px;
+        font-size: 1.5rem;
+    }
+}
